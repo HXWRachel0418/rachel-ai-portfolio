@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>平台运营 × AI提效项目作品集</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero__glow hero__glow--left"></div>
+        <div class="hero__glow hero__glow--right"></div>
+        <div class="hero__content">
+          <div class="hero__text">
+            <p class="hero__eyebrow" id="heroEyebrow"></p>
+            <h1 id="heroTitle"></h1>
+            <p class="hero__summary" id="heroSummary"></p>
+            <div class="hero__metrics" id="heroMetrics"></div>
+            <button class="hero__cta" id="heroCta" type="button"></button>
+          </div>
+
+          <aside class="hero__profile">
+            <div class="profile-card">
+              <p class="section-tag" id="aboutTag"></p>
+              <h2 id="aboutTitle"></h2>
+              <p id="aboutSummary"></p>
+              <div class="profile-tags" id="aboutTags"></div>
+            </div>
+          </aside>
+        </div>
+      </header>
+
+      <main class="portfolio">
+        <section class="showcase-panel" id="projectShowcase">
+          <div class="showcase-panel__head">
+            <div>
+              <p class="section-tag" id="sliderTag"></p>
+              <h2 id="sliderTitle"></h2>
+            </div>
+            <div class="showcase-panel__actions">
+              <button class="nav-button" id="prevButton" aria-label="上一个项目">←</button>
+              <button class="nav-button" id="nextButton" aria-label="下一个项目">→</button>
+            </div>
+          </div>
+
+          <div class="carousel" id="carousel" aria-live="polite"></div>
+
+          <div class="carousel__hint">
+            <span id="sliderHint"></span>
+            <div class="carousel__dots" id="dots"></div>
+          </div>
+        </section>
+
+        <section class="detail-panel" id="detailPanel">
+          <div class="detail-panel__header">
+            <div>
+              <p class="section-tag" id="detailTag"></p>
+              <h2 id="detailTitle"></h2>
+            </div>
+            <div class="detail-panel__badge" id="detailBadge"></div>
+          </div>
+
+          <p class="detail-panel__intro" id="detailIntro"></p>
+
+          <div class="detail-grid">
+            <article class="detail-card detail-card--role detail-card--merged">
+              <div class="merged-block">
+                <h3 id="detailRoleLabel"></h3>
+                <div class="role-tags" id="detailRole"></div>
+              </div>
+              <div class="merged-block">
+                <h3 id="detailTagsLabel"></h3>
+                <div class="detail-tags" id="detailTags"></div>
+              </div>
+            </article>
+            <article class="detail-card">
+              <h3 id="detailSituationLabel"></h3>
+              <p id="detailSituation"></p>
+            </article>
+            <article class="detail-card">
+              <h3 id="detailActionsLabel"></h3>
+              <ul id="detailActions"></ul>
+            </article>
+            <article class="detail-card">
+              <h3 id="detailResultsLabel"></h3>
+              <ul id="detailResults"></ul>
+            </article>
+          </div>
+
+          <section class="evidence-panel">
+            <div class="evidence-panel__header">
+              <p class="section-tag" id="detailEvidenceLabel"></p>
+              <p class="evidence-panel__note">截图均已脱敏处理，点击缩略图可查看完整大图。</p>
+              <p class="evidence-panel__summary" id="evidenceSummary"></p>
+            </div>
+            <div class="evidence-panel__gallery" id="evidenceGallery"></div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <div class="image-modal" id="imageModal" aria-hidden="true">
+      <button class="image-modal__backdrop" id="imageModalBackdrop" aria-label="关闭图片预览"></button>
+      <div class="image-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="imageModalTitle">
+        <button class="image-modal__close" id="imageModalClose" type="button" aria-label="关闭图片预览">×</button>
+        <p class="image-modal__label" id="imageModalTitle"></p>
+        <img class="image-modal__image" id="imageModalImage" src="" alt="" />
+      </div>
+    </div>
+
+    <script src="./content.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
